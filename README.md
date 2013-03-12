@@ -1,0 +1,4 @@
+getme
+=====
+
+A Nonsense Generator
