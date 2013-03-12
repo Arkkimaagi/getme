@@ -1,6 +1,6 @@
 {
   "name": "getme",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Getme is a nonsense generator built for prototyping.",
   "keywords": [
     "nonsense",
@@ -21,7 +21,8 @@
     "url": "http://github.com/Arkkimaagi/getme/issues"
   },
   "dependencies": {
-    "srand": "~1.1.1"
+    "srand": "~1.1.1",
+    "moment": "~2.0.0"
   },
   "devDependencies": {
     "uglify-js": "latest",
