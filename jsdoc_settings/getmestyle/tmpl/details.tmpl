@@ -1,0 +1,84 @@
+<?js
+var data = obj;
+var self = this;
+?>
+<div class="details">
+	<?js
+			var properties = data.properties;
+			if (properties && properties.length && properties.forEach) { 
+	?>
+			
+			<h5 class="subsection-title">Properties:</h5>
+			
+			<dl><?js= this.partial('properties.tmpl', properties) ?></dl>
+			
+	<?js } ?>
+			
+	<?js if (data.version) {?>
+	<div class="label label-info"><strong>Version:</strong> <?js= version ?></div>
+	<?js } ?>
+		
+	<?js if (data.since) {?>
+	<div class="label label-info"><strong>Since:</strong> <?js= since ?></div>
+	<?js } ?>
+
+	<?js if (data.inherited && data.inherits) { ?>
+	<div class="label label-info"><strong>Inherited From:</strong> <?js= this.linkto(data.inherits, this.htmlsafe(data.inherits)) ?> </div>
+	<?js } ?>
+	
+	<?js if (data.deprecated) { ?>
+			<div class="alert alert-error">
+				<strong>Deprecated:</strong> <?js
+					if (data.deprecated === true) { ?><ul class="dummy"><li>Yes</li></ul><?js }
+					else { ?><ul class="dummy"><li><?js= data.deprecated ?></li><ul><?js }
+			?></div>
+	<?js } ?>
+	
+	<?js if (data.author && author.length) {?>
+	<div class="alert alert-info"><strong>Author:</strong>
+			<ul><?js author.forEach(function(a) { ?>
+					<li><?js= self.resolveAuthorLinks(a) ?></li>
+			<?js }); ?></ul>
+	</div>
+	<?js } ?>
+	
+	<?js if (data.copyright) {?>
+	<div class="alert alert-success"><strong>Copyright:</strong> <?js= copyright ?></div>
+	<?js } ?>
+	
+	<?js if (data.license) {?>
+	<div class="alert alert-success"><strong>License:</strong> <?js= license ?></div>
+	<?js } ?>
+	
+	<?js if (data.defaultvalue) {?>
+	<div class="alert alert-info"><strong>Default Value:</strong> <?js= data.defaultvalue ?>
+	<?js } ?>
+	
+	<?js if (data.meta) {?>
+	<div class="muted">Source: <?js= self.linkto(meta.filename) ?>, line <?js= meta.lineno ?></div>
+	<?js } ?>
+	
+	<?js if (data.tutorials && tutorials.length) {?>
+	<div class="alert alert-info"><strong>Tutorials:</strong>
+			<ul><?js tutorials.forEach(function(t) { ?>
+					<li><?js= self.tutoriallink(t) ?></li>
+			<?js }); ?></ul>
+	</div>
+	<?js } ?>
+	
+	<?js if (data.see && see.length) {?>
+	<div class="alert"><strong>See:</strong>
+		<ul><?js see.forEach(function(s) { ?>
+			<li><?js= self.linkto(s) ?></li>
+		<?js }); ?></ul>
+	<?js } ?>
+	
+	<?js if (data.todo && todo.length) {?>
+	<div class="alert alert-warning">
+		<strong>To Do:</strong>
+				<ul><?js todo.forEach(function(t) { ?>
+						<li><?js= t ?></li>
+				<?js }); ?></ul>
+	</div>
+	<?js } ?>
+</div>
