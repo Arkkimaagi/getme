@@ -95,5 +95,11 @@ Whew, plenty of stuff to do... :-/
 
 ## Release History
 
-* 2013-03-12 - v0.1.1 - Clarified licence
-* 2013-03-12 - v0.1.0 - Initial release
+* 2013-03-12 - v0.1.2
+	* Removed timestamp from documentation pages, it caused extra commits.
+
+* 2013-03-12 - v0.1.1
+	* Clarified Licence
+
+* 2013-03-12 - v0.1.0
+	* Initial release

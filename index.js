@@ -11,7 +11,7 @@
  * @readonly
  * @type {String}
  */
-exports.version = "0.1.1"; //It's automatically updated with Grunt
+exports.version = "0.1.2"; //It's automatically updated with Grunt
 
 /**
  * Array of supported languages by this version
