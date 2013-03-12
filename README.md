@@ -95,11 +95,11 @@ Whew, plenty of stuff to do... :-/
 
 ## Release History
 
-* 2013-03-12 - v0.1.2
-	* Removed timestamp from documentation pages, it caused extra commits.
+#### 2013-03-12 - v0.2.0
+* Added getme.random.number()
+* Added support for random.internet.ip()
+* Added automated documentation about all the module features.
+* Fixed a major bug (moment.js was missing from dep, doh)
 
-* 2013-03-12 - v0.1.1
-	* Clarified Licence
-
-* 2013-03-12 - v0.1.0
-	* Initial release
+#### 2013-03-12 - v0.1.0
+* Initial release

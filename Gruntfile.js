@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	//Load our own tasks
-	//grunt.loadTasks('tasks');
+	grunt.loadTasks('tasks');
 
 //--------------------------------------------------------------------------------------------------
 
@@ -49,12 +49,23 @@ module.exports = function(grunt) {
 
 		jsdoc: {
 			dist: {
-				src: ['README.md', 'index.js', 'lib/*.js'],
+				src: ['README.md', 'index.js', 'lib/**/*.js'],
 				options: {
 					configure: "./jsdoc_settings/conf.json",
 					template: "./jsdoc_settings/getmestyle/",
 					tutorials: "./tutorials/",
 					destination: 'doc'
+				}
+			}
+		},
+
+		list_features: {
+			dist: {
+				options: {
+					prefix: "getme",
+				},
+				files:{
+					"./tutorials/features.md": "./index.js"
 				}
 			}
 		}
@@ -67,7 +78,7 @@ module.exports = function(grunt) {
 	grunt.initConfig(conf);
 
 	grunt.registerTask('default', [
-		'string-replace', 'jsdoc'
+		'string-replace', 'list_features', 'jsdoc'
 	]);
 
 };
