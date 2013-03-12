@@ -51,6 +51,14 @@ console.log(getme.random.between(1,5)); //Always prints 3
 ```
 This way we can get random looking results that do not change on each build. With numbers this may seem trivial, but as Getme supports seeded random on everything it does, this becomes more useful.
 
+## Install
+
+You can clone the repo to your machine, and then install the dependencies with:
+```
+npm install --production
+```
+If you wish, you can get the whole environment by dropping the `--production` -part out.
+
 ## Documentation
 
 The documentation is currently handled by automatically generated html files that can be found in the "doc" folder.

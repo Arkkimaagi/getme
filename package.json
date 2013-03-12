@@ -1,6 +1,6 @@
 {
   "name": "getme",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Getme is a nonsense generator built for prototyping.",
   "keywords": [
     "nonsense",
@@ -22,12 +22,12 @@
   },
   "dependencies": {
     "srand": "~1.1.1",
+    "lodash": "~1.0.1",
     "moment": "~2.0.0"
   },
   "devDependencies": {
     "uglify-js": "latest",
     "grunt": "latest",
-    "lodash": "~1.0.1",
     "grunt-jsdoc": "~0.2.4",
     "grunt-contrib-jshint": "~0.2.0",
     "grunt-string-replace": "~0.2.2",
