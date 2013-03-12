@@ -64,6 +64,10 @@ You can find me at [@tapionlinna](https://twitter.com/Tapionlinna).
 
 Getme follows [Semantic Versioning](http://semver.org/) rules on it's release versioning.
 
+### Licence
+
+Getme is currently under MIT Licence. Please see the enclosed file.
+
 ### Milestones
 
 Following features are planned before 1.0.0 release:
@@ -91,4 +95,5 @@ Whew, plenty of stuff to do... :-/
 
 ## Release History
 
+* 2013-03-12 - v0.1.1 - Clarified licence
 * 2013-03-12 - v0.1.0 - Initial release
